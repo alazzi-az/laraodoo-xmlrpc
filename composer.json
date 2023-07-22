@@ -1,5 +1,5 @@
 {
-    "name": "alazzidev/laraodoo-xmlrpc",
+    "name": "alazzi-az/laraodoo-xmlrpc",
     "description": "Odoo-Xmlrpc PHP for Laravel is a supercharged PHP API client that allows you to interact with the Odoo XML-RPC API",
     "require": {
         "php": "^8.1.0",
