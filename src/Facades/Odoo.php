@@ -4,14 +4,11 @@ declare(strict_types=1);
 
 namespace Alazzidev\LaraodooXmlrpc\Facades;
 
-use AlazziAz\OdooXmlrpc\Contracts\OdooClientContract;
 use AlazziAz\OdooXmlrpc\OdooClient;
 use AlazziAz\OdooXmlrpc\QueryBuilder;
 use AlazziAz\OdooXmlrpc\Testing\OdooClientFake;
 use Illuminate\Support\Facades\Facade;
 use Laminas\XmlRpc\Client;
-
-
 
 /**
  * @method static array get(string $model, array $filters = [], array $fields = [], int $limit = null, int $offset = null)
@@ -27,17 +24,18 @@ use Laminas\XmlRpc\Client;
  * @method static mixed getVersion()
  * @method static Client getCommonClient()
  * @method static Client getObjectClient()
+ *
  * @see OdooClient
  */
 final class Odoo extends Facade
 {
     /**
-     * @param array<array-key, array|string|int> $objectResponse
+     * @param  array<array-key, array|string|int>  $objectResponse
      */
     public static function fake(array|string|int $objectResponse = [], array|string|int $commonResponse = 1): OdooClientFake
-        /** @phpstan-ignore-line */
+    /** @phpstan-ignore-line */
     {
-        $fake = new OdooClientFake(fakeObjectResponse: $objectResponse,fakeCommonResponse: $commonResponse);
+        $fake = new OdooClientFake(fakeObjectResponse: $objectResponse, fakeCommonResponse: $commonResponse);
         self::swap($fake);
 
         return $fake;

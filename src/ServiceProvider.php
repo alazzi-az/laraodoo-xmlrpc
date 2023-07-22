@@ -14,7 +14,6 @@ use Alazzidev\LaraodooXmlrpc\Exceptions\MissingUsernameException;
 use Illuminate\Contracts\Support\DeferrableProvider;
 use Illuminate\Support\ServiceProvider as BaseServiceProvider;
 
-
 /**
  * @internal
  */
@@ -64,7 +63,7 @@ final class ServiceProvider extends BaseServiceProvider implements DeferrablePro
     {
         if ($this->app->runningInConsole()) {
             $this->publishes([
-                __DIR__ . '/../config/odoo-xmlrpc.php' => config_path('odoo-xmlrpc.php'),
+                __DIR__.'/../config/odoo-xmlrpc.php' => config_path('odoo-xmlrpc.php'),
             ]);
         }
     }

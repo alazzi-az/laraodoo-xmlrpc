@@ -9,7 +9,6 @@ use Alazzidev\LaraodooXmlrpc\Exceptions\MissingUsernameException;
 use Alazzidev\LaraodooXmlrpc\ServiceProvider;
 use Illuminate\Config\Repository;
 
-
 it('binds the client on the container', function () {
     $app = app();
 
