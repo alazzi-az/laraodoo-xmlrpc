@@ -1,0 +1,40 @@
+{
+    "name": "alazzidev/laraodoo-xmlrpc",
+    "description": "Odoo-Xmlrpc PHP for Laravel is a supercharged PHP API client that allows you to interact with the Odoo XML-RPC API",
+    "require": {
+        "php": "^8.1.0",
+        "laravel/framework": "^9.46.0|^10.14.1",
+        "alazzi-az/odoo-xmlrpc": "^1.0"
+    },
+    "require-dev": {
+        "laravel/pint": "^1.10",
+        "pestphp/pest": "^2.9"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Alazzidev\\LaraodooXmlrpc\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "mohammedazman",
+            "email": "azmman2012@gmail.com"
+        }
+    ],
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Alazzidev\\LaraodooXmlrpc\\ServiceProvider"
+            ]
+        }
+    },
+    "scripts": {
+        "test:unit": "pest --colors=always"
+    }
+}
